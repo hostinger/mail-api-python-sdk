@@ -1,0 +1,32 @@
+# Error
+
+Standard error envelope. Frontend translations key off `code`, never off `error`.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**error** | **str** | Human-readable error message. | 
+**code** | **str** | Machine-readable error code in SCREAMING_SNAKE_CASE. | 
+**params** | **Dict[str, object]** | Additional structured context for the error. May be omitted. | [optional] 
+
+## Example
+
+```python
+from hostinger_email_api.models.error import Error
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of Error from a JSON string
+error_instance = Error.from_json(json)
+# print the JSON string representation of the object
+print(Error.to_json())
+
+# convert the object into a dict
+error_dict = error_instance.to_dict()
+# create an instance of Error from a dict
+error_from_dict = Error.from_dict(error_dict)
+```
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
