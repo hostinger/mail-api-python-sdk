@@ -21,8 +21,8 @@ def read(filename):
 #
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
-NAME = "hostinger_email_api"
-VERSION = "1.0.1"
+NAME = "hostinger_mail_api"
+VERSION = "1.0.2"
 PYTHON_REQUIRES = ">= 3.9"
 REQUIRES = [
     "urllib3 >= 2.7.0, < 3.0.0",
@@ -37,7 +37,7 @@ setup(
     description="Hostinger Email API",
     author="Hostinger",
     author_email="devs@hostinger.com",
-    url="https://github.com/hostinger/email-api-python-sdk",
+    url="https://github.com/hostinger/mail-api-python-sdk",
     keywords=["hostinger", "openapi", "python", "sdk", "rest", "api"],
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),
@@ -45,5 +45,5 @@ setup(
     license="MIT",
     long_description_content_type='text/markdown',
     long_description=(read('README.md')),
-    package_data={"hostinger_email_api": ["py.typed"]},
+    package_data={"hostinger_mail_api": ["py.typed"]},
 )

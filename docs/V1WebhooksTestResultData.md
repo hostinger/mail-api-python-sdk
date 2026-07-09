@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from hostinger_email_api.models.v1_webhooks_test_result_data import V1WebhooksTestResultData
+from hostinger_mail_api.models.v1_webhooks_test_result_data import V1WebhooksTestResultData
 
 # TODO update the JSON string below
 json = "{}"

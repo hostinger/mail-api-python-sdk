@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_folders_update_request import V1FoldersUpdateRequest
+from hostinger_mail_api.models.v1_folders_update_request import V1FoldersUpdateRequest
 
 class TestV1FoldersUpdateRequest(unittest.TestCase):
     """V1FoldersUpdateRequest unit test stubs"""

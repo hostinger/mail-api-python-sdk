@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.api.folders_api import FoldersApi
+from hostinger_mail_api.api.folders_api import FoldersApi
 
 
 class TestFoldersApi(unittest.TestCase):

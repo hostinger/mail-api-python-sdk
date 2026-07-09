@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.api.quota_api import QuotaApi
+from hostinger_mail_api.api.quota_api import QuotaApi
 
 
 class TestQuotaApi(unittest.TestCase):

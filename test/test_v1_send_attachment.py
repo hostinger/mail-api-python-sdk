@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_send_attachment import V1SendAttachment
+from hostinger_mail_api.models.v1_send_attachment import V1SendAttachment
 
 class TestV1SendAttachment(unittest.TestCase):
     """V1SendAttachment unit test stubs"""

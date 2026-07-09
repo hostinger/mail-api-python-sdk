@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_folders_resource import V1FoldersResource
+from hostinger_mail_api.models.v1_folders_resource import V1FoldersResource
 
 class TestV1FoldersResource(unittest.TestCase):
     """V1FoldersResource unit test stubs"""
@@ -33,7 +33,7 @@ class TestV1FoldersResource(unittest.TestCase):
         model = V1FoldersResource()
         if include_optional:
             return V1FoldersResource(
-                data = hostinger_email_api.models.v1/folders/folder.V1.Folders.Folder(
+                data = hostinger_mail_api.models.v1/folders/folder.V1.Folders.Folder(
                     path = 'INBOX.Sent', 
                     name = 'Sent', 
                     delimiter = '.', 
@@ -43,7 +43,7 @@ class TestV1FoldersResource(unittest.TestCase):
             )
         else:
             return V1FoldersResource(
-                data = hostinger_email_api.models.v1/folders/folder.V1.Folders.Folder(
+                data = hostinger_mail_api.models.v1/folders/folder.V1.Folders.Folder(
                     path = 'INBOX.Sent', 
                     name = 'Sent', 
                     delimiter = '.', 

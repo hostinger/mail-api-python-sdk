@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from hostinger_email_api.models.v1_folder_messages_search_request import V1FolderMessagesSearchRequest
+from hostinger_mail_api.models.v1_folder_messages_search_request import V1FolderMessagesSearchRequest
 
 # TODO update the JSON string below
 json = "{}"

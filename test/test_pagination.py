@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.pagination import Pagination
+from hostinger_mail_api.models.pagination import Pagination
 
 class TestPagination(unittest.TestCase):
     """Pagination unit test stubs"""

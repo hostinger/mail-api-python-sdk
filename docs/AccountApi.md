@@ -1,4 +1,4 @@
-# hostinger_email_api.AccountApi
+# hostinger_mail_api.AccountApi
 
 All URIs are relative to *https://api.mail.hostinger.com*
 
@@ -19,21 +19,21 @@ Returns the authenticated account and the mailboxes it can manage.
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.models.v1_me_resource import V1MeResource
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.models.v1_me_resource import V1MeResource
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.AccountApi(api_client)
+    api_instance = hostinger_mail_api.AccountApi(api_client)
 
     try:
         # Get the authenticated account

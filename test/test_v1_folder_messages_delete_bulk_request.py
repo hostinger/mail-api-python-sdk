@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_folder_messages_delete_bulk_request import V1FolderMessagesDeleteBulkRequest
+from hostinger_mail_api.models.v1_folder_messages_delete_bulk_request import V1FolderMessagesDeleteBulkRequest
 
 class TestV1FolderMessagesDeleteBulkRequest(unittest.TestCase):
     """V1FolderMessagesDeleteBulkRequest unit test stubs"""

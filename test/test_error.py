@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.error import Error
+from hostinger_mail_api.models.error import Error
 
 class TestError(unittest.TestCase):
     """Error unit test stubs"""

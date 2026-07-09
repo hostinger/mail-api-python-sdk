@@ -1,4 +1,4 @@
-# hostinger_email_api.WebhooksApi
+# hostinger_mail_api.WebhooksApi
 
 All URIs are relative to *https://api.mail.hostinger.com*
 
@@ -25,24 +25,24 @@ Create a webhook. The response includes the one-time `secret` — store it secur
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.models.v1_webhooks_create_request import V1WebhooksCreateRequest
-from hostinger_email_api.models.v1_webhooks_resource_with_secret import V1WebhooksResourceWithSecret
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.models.v1_webhooks_create_request import V1WebhooksCreateRequest
+from hostinger_mail_api.models.v1_webhooks_resource_with_secret import V1WebhooksResourceWithSecret
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.WebhooksApi(api_client)
+    api_instance = hostinger_mail_api.WebhooksApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox the bearer token is authorized for.
-    v1_webhooks_create_request = hostinger_email_api.V1WebhooksCreateRequest() # V1WebhooksCreateRequest | 
+    v1_webhooks_create_request = hostinger_mail_api.V1WebhooksCreateRequest() # V1WebhooksCreateRequest | 
 
     try:
         # Create webhook
@@ -101,20 +101,20 @@ Delete a webhook.
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.WebhooksApi(api_client)
+    api_instance = hostinger_mail_api.WebhooksApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox.
     webhook = '019683f8-1234-7abc-8def-0123456789ab' # str | Webhook identifier (UUID v7).
 
@@ -173,21 +173,21 @@ Retrieve a single webhook by id.
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.models.v1_webhooks_resource import V1WebhooksResource
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.models.v1_webhooks_resource import V1WebhooksResource
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.WebhooksApi(api_client)
+    api_instance = hostinger_mail_api.WebhooksApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox.
     webhook = '019683f8-1234-7abc-8def-0123456789ab' # str | Webhook identifier (UUID v7).
 
@@ -248,21 +248,21 @@ List webhooks for a mailbox.
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.models.v1_webhooks_collection import V1WebhooksCollection
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.models.v1_webhooks_collection import V1WebhooksCollection
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.WebhooksApi(api_client)
+    api_instance = hostinger_mail_api.WebhooksApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox the bearer token is authorized for.
     status = 'status_example' # str |  (optional)
     page = 1 # int |  (optional) (default to 1)
@@ -327,21 +327,21 @@ Regenerate the webhook secret. The previous secret is immediately invalidated. T
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.models.v1_webhooks_resource_with_secret import V1WebhooksResourceWithSecret
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.models.v1_webhooks_resource_with_secret import V1WebhooksResourceWithSecret
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.WebhooksApi(api_client)
+    api_instance = hostinger_mail_api.WebhooksApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox.
     webhook = '019683f8-1234-7abc-8def-0123456789ab' # str | Webhook identifier (UUID v7).
 
@@ -402,21 +402,21 @@ Send a test delivery to the webhook URL and return the upstream response.
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.models.v1_webhooks_test_result import V1WebhooksTestResult
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.models.v1_webhooks_test_result import V1WebhooksTestResult
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.WebhooksApi(api_client)
+    api_instance = hostinger_mail_api.WebhooksApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox.
     webhook = '019683f8-1234-7abc-8def-0123456789ab' # str | Webhook identifier (UUID v7).
 
@@ -477,25 +477,25 @@ Partially update a webhook.
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.models.v1_webhooks_resource import V1WebhooksResource
-from hostinger_email_api.models.v1_webhooks_update_request import V1WebhooksUpdateRequest
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.models.v1_webhooks_resource import V1WebhooksResource
+from hostinger_mail_api.models.v1_webhooks_update_request import V1WebhooksUpdateRequest
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.WebhooksApi(api_client)
+    api_instance = hostinger_mail_api.WebhooksApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox.
     webhook = '019683f8-1234-7abc-8def-0123456789ab' # str | Webhook identifier (UUID v7).
-    v1_webhooks_update_request = hostinger_email_api.V1WebhooksUpdateRequest() # V1WebhooksUpdateRequest | 
+    v1_webhooks_update_request = hostinger_mail_api.V1WebhooksUpdateRequest() # V1WebhooksUpdateRequest | 
 
     try:
         # Update webhook

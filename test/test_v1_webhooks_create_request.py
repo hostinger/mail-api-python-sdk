@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_webhooks_create_request import V1WebhooksCreateRequest
+from hostinger_mail_api.models.v1_webhooks_create_request import V1WebhooksCreateRequest
 
 class TestV1WebhooksCreateRequest(unittest.TestCase):
     """V1WebhooksCreateRequest unit test stubs"""

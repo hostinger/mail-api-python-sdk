@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_folder_messages_update_flags_result_data_failed_inner import V1FolderMessagesUpdateFlagsResultDataFailedInner
+from hostinger_mail_api.models.v1_folder_messages_update_flags_result_data_failed_inner import V1FolderMessagesUpdateFlagsResultDataFailedInner
 
 class TestV1FolderMessagesUpdateFlagsResultDataFailedInner(unittest.TestCase):
     """V1FolderMessagesUpdateFlagsResultDataFailedInner unit test stubs"""

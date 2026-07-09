@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_webhooks_test_result import V1WebhooksTestResult
+from hostinger_mail_api.models.v1_webhooks_test_result import V1WebhooksTestResult
 
 class TestV1WebhooksTestResult(unittest.TestCase):
     """V1WebhooksTestResult unit test stubs"""
@@ -33,14 +33,14 @@ class TestV1WebhooksTestResult(unittest.TestCase):
         model = V1WebhooksTestResult()
         if include_optional:
             return V1WebhooksTestResult(
-                data = hostinger_email_api.models.v1_webhooks_test_result_data.V1_Webhooks_TestResult_data(
+                data = hostinger_mail_api.models.v1_webhooks_test_result_data.V1_Webhooks_TestResult_data(
                     http_status = 200, 
                     success = True, 
                     error = 'Connection refused', )
             )
         else:
             return V1WebhooksTestResult(
-                data = hostinger_email_api.models.v1_webhooks_test_result_data.V1_Webhooks_TestResult_data(
+                data = hostinger_mail_api.models.v1_webhooks_test_result_data.V1_Webhooks_TestResult_data(
                     http_status = 200, 
                     success = True, 
                     error = 'Connection refused', ),

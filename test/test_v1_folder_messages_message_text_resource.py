@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_folder_messages_message_text_resource import V1FolderMessagesMessageTextResource
+from hostinger_mail_api.models.v1_folder_messages_message_text_resource import V1FolderMessagesMessageTextResource
 
 class TestV1FolderMessagesMessageTextResource(unittest.TestCase):
     """V1FolderMessagesMessageTextResource unit test stubs"""
@@ -33,13 +33,13 @@ class TestV1FolderMessagesMessageTextResource(unittest.TestCase):
         model = V1FolderMessagesMessageTextResource()
         if include_optional:
             return V1FolderMessagesMessageTextResource(
-                data = hostinger_email_api.models.v1/folder_messages/message_text.V1.FolderMessages.MessageText(
+                data = hostinger_mail_api.models.v1/folder_messages/message_text.V1.FolderMessages.MessageText(
                     text = 'Hello world', 
                     html = '<p>Hello world</p>', )
             )
         else:
             return V1FolderMessagesMessageTextResource(
-                data = hostinger_email_api.models.v1/folder_messages/message_text.V1.FolderMessages.MessageText(
+                data = hostinger_mail_api.models.v1/folder_messages/message_text.V1.FolderMessages.MessageText(
                     text = 'Hello world', 
                     html = '<p>Hello world</p>', ),
         )

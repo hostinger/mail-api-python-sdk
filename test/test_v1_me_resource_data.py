@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_me_resource_data import V1MeResourceData
+from hostinger_mail_api.models.v1_me_resource_data import V1MeResourceData
 
 class TestV1MeResourceData(unittest.TestCase):
     """V1MeResourceData unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1MeResourceData(unittest.TestCase):
             return V1MeResourceData(
                 order_resource_id = 'OR1a2b3c4d5e6f7g',
                 mailboxes = [
-                    hostinger_email_api.models.v1/me/mailbox.V1.Me.Mailbox(
+                    hostinger_mail_api.models.v1/me/mailbox.V1.Me.Mailbox(
                         resource_id = 'AC1a2b3c4d5e6f7g', 
                         address = 'user@example.com', )
                     ]
@@ -44,7 +44,7 @@ class TestV1MeResourceData(unittest.TestCase):
             return V1MeResourceData(
                 order_resource_id = 'OR1a2b3c4d5e6f7g',
                 mailboxes = [
-                    hostinger_email_api.models.v1/me/mailbox.V1.Me.Mailbox(
+                    hostinger_mail_api.models.v1/me/mailbox.V1.Me.Mailbox(
                         resource_id = 'AC1a2b3c4d5e6f7g', 
                         address = 'user@example.com', )
                     ],

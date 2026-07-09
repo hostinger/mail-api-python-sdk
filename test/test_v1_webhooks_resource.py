@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_webhooks_resource import V1WebhooksResource
+from hostinger_mail_api.models.v1_webhooks_resource import V1WebhooksResource
 
 class TestV1WebhooksResource(unittest.TestCase):
     """V1WebhooksResource unit test stubs"""
@@ -33,7 +33,7 @@ class TestV1WebhooksResource(unittest.TestCase):
         model = V1WebhooksResource()
         if include_optional:
             return V1WebhooksResource(
-                data = hostinger_email_api.models.v1/webhooks/webhook.V1.Webhooks.Webhook(
+                data = hostinger_mail_api.models.v1/webhooks/webhook.V1.Webhooks.Webhook(
                     id = '019683f8-1234-7abc-8def-0123456789ab', 
                     account_resource_id = 'AC1a2b3c4d5e6f7g', 
                     mailbox = 'user@example.com', 
@@ -49,7 +49,7 @@ class TestV1WebhooksResource(unittest.TestCase):
             )
         else:
             return V1WebhooksResource(
-                data = hostinger_email_api.models.v1/webhooks/webhook.V1.Webhooks.Webhook(
+                data = hostinger_mail_api.models.v1/webhooks/webhook.V1.Webhooks.Webhook(
                     id = '019683f8-1234-7abc-8def-0123456789ab', 
                     account_resource_id = 'AC1a2b3c4d5e6f7g', 
                     mailbox = 'user@example.com', 

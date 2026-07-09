@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_send_request import V1SendRequest
+from hostinger_mail_api.models.v1_send_request import V1SendRequest
 
 class TestV1SendRequest(unittest.TestCase):
     """V1SendRequest unit test stubs"""
@@ -41,7 +41,7 @@ class TestV1SendRequest(unittest.TestCase):
                 text = 'Plain body',
                 html = '<p>HTML body</p>',
                 attachments = [
-                    hostinger_email_api.models.v1/send/attachment.V1.Send.Attachment(
+                    hostinger_mail_api.models.v1/send/attachment.V1.Send.Attachment(
                         filename = 'invoice.pdf', 
                         content = 'JVBERi0xLjQK...', 
                         content_type = 'application/pdf', 

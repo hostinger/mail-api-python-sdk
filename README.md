@@ -1,6 +1,6 @@
-# Hostinger Email API Python SDK
+# Hostinger Mail API Python SDK
 
-[![PyPI version](https://badge.fury.io/py/hostinger_email_api.svg)](https://badge.fury.io/py/hostinger_email_api)
+[![PyPI version](https://badge.fury.io/py/hostinger_mail_api.svg)](https://badge.fury.io/py/hostinger_mail_api)
 
 ## About
 This is a Python SDK for the [Hostinger API](https://developers.hostinger.com).
@@ -21,12 +21,12 @@ source venv/bin/activate
 
 Install the package via [pip](https://pypi.org/project/pip/):
 ```sh
-pip install hostinger_email_api
+pip install hostinger_mail_api
 ```
 
 Then import the package:
 ```python
-import hostinger_email_api
+import hostinger_mail_api
 ```
 
 ### Setuptools
@@ -40,7 +40,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import hostinger_email_api
+import hostinger_mail_api
 ```
 
 ## Getting Started
@@ -49,21 +49,21 @@ Please follow the [installation procedure](#installation--usage) and then run th
 
 ```python
 
-import hostinger_email_api
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.AccountApi(api_client)
+    api_instance = hostinger_mail_api.AccountApi(api_client)
 
     try:
         # Get the authenticated account

@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_folder_messages_flags_bulk_request import V1FolderMessagesFlagsBulkRequest
+from hostinger_mail_api.models.v1_folder_messages_flags_bulk_request import V1FolderMessagesFlagsBulkRequest
 
 class TestV1FolderMessagesFlagsBulkRequest(unittest.TestCase):
     """V1FolderMessagesFlagsBulkRequest unit test stubs"""

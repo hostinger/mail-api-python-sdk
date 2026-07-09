@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from hostinger_email_api.models.v1_quota_quota_resource import V1QuotaQuotaResource
+from hostinger_mail_api.models.v1_quota_quota_resource import V1QuotaQuotaResource
 
 # TODO update the JSON string below
 json = "{}"

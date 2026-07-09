@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_folder_messages_search_request import V1FolderMessagesSearchRequest
+from hostinger_mail_api.models.v1_folder_messages_search_request import V1FolderMessagesSearchRequest
 
 class TestV1FolderMessagesSearchRequest(unittest.TestCase):
     """V1FolderMessagesSearchRequest unit test stubs"""

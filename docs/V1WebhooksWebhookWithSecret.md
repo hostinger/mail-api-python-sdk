@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from hostinger_email_api.models.v1_webhooks_webhook_with_secret import V1WebhooksWebhookWithSecret
+from hostinger_mail_api.models.v1_webhooks_webhook_with_secret import V1WebhooksWebhookWithSecret
 
 # TODO update the JSON string below
 json = "{}"

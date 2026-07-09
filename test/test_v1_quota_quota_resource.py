@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_quota_quota_resource import V1QuotaQuotaResource
+from hostinger_mail_api.models.v1_quota_quota_resource import V1QuotaQuotaResource
 
 class TestV1QuotaQuotaResource(unittest.TestCase):
     """V1QuotaQuotaResource unit test stubs"""

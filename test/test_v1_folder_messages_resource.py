@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_folder_messages_resource import V1FolderMessagesResource
+from hostinger_mail_api.models.v1_folder_messages_resource import V1FolderMessagesResource
 
 class TestV1FolderMessagesResource(unittest.TestCase):
     """V1FolderMessagesResource unit test stubs"""
@@ -33,7 +33,7 @@ class TestV1FolderMessagesResource(unittest.TestCase):
         model = V1FolderMessagesResource()
         if include_optional:
             return V1FolderMessagesResource(
-                data = hostinger_email_api.models.v1/folder_messages/message.V1.FolderMessages.Message(
+                data = hostinger_mail_api.models.v1/folder_messages/message.V1.FolderMessages.Message(
                     uid = 123, 
                     path = 'INBOX', 
                     date = '2024-01-15T10:30Z', 
@@ -41,11 +41,11 @@ class TestV1FolderMessagesResource(unittest.TestCase):
                     unseen = False, 
                     size = 2048, 
                     subject = 'Test Email Subject', 
-                    from = hostinger_email_api.models.v1/folder_messages/message_address.V1.FolderMessages.MessageAddress(
+                    from = hostinger_mail_api.models.v1/folder_messages/message_address.V1.FolderMessages.MessageAddress(
                         name = 'John Doe', 
                         address = 'john@example.com', ), 
                     to = [
-                        hostinger_email_api.models.v1/folder_messages/message_address.V1.FolderMessages.MessageAddress(
+                        hostinger_mail_api.models.v1/folder_messages/message_address.V1.FolderMessages.MessageAddress(
                             name = 'John Doe', 
                             address = 'john@example.com', )
                         ], 
@@ -58,7 +58,7 @@ class TestV1FolderMessagesResource(unittest.TestCase):
                     message_id = '<1234567890@example.com>', 
                     in_reply_to = '<0987654321@example.com>', 
                     attachments = [
-                        hostinger_email_api.models.v1/folder_messages/message_attachment.V1.FolderMessages.MessageAttachment(
+                        hostinger_mail_api.models.v1/folder_messages/message_attachment.V1.FolderMessages.MessageAttachment(
                             id = 'YXR0YWNobWVudDpJTkJPWDoxMjM6MS4y', 
                             content_type = 'application/pdf', 
                             size_bytes = 1024, 
@@ -69,7 +69,7 @@ class TestV1FolderMessagesResource(unittest.TestCase):
             )
         else:
             return V1FolderMessagesResource(
-                data = hostinger_email_api.models.v1/folder_messages/message.V1.FolderMessages.Message(
+                data = hostinger_mail_api.models.v1/folder_messages/message.V1.FolderMessages.Message(
                     uid = 123, 
                     path = 'INBOX', 
                     date = '2024-01-15T10:30Z', 
@@ -77,11 +77,11 @@ class TestV1FolderMessagesResource(unittest.TestCase):
                     unseen = False, 
                     size = 2048, 
                     subject = 'Test Email Subject', 
-                    from = hostinger_email_api.models.v1/folder_messages/message_address.V1.FolderMessages.MessageAddress(
+                    from = hostinger_mail_api.models.v1/folder_messages/message_address.V1.FolderMessages.MessageAddress(
                         name = 'John Doe', 
                         address = 'john@example.com', ), 
                     to = [
-                        hostinger_email_api.models.v1/folder_messages/message_address.V1.FolderMessages.MessageAddress(
+                        hostinger_mail_api.models.v1/folder_messages/message_address.V1.FolderMessages.MessageAddress(
                             name = 'John Doe', 
                             address = 'john@example.com', )
                         ], 
@@ -94,7 +94,7 @@ class TestV1FolderMessagesResource(unittest.TestCase):
                     message_id = '<1234567890@example.com>', 
                     in_reply_to = '<0987654321@example.com>', 
                     attachments = [
-                        hostinger_email_api.models.v1/folder_messages/message_attachment.V1.FolderMessages.MessageAttachment(
+                        hostinger_mail_api.models.v1/folder_messages/message_attachment.V1.FolderMessages.MessageAttachment(
                             id = 'YXR0YWNobWVudDpJTkJPWDoxMjM6MS4y', 
                             content_type = 'application/pdf', 
                             size_bytes = 1024, 

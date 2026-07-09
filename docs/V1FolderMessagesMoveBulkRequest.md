@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from hostinger_email_api.models.v1_folder_messages_move_bulk_request import V1FolderMessagesMoveBulkRequest
+from hostinger_mail_api.models.v1_folder_messages_move_bulk_request import V1FolderMessagesMoveBulkRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -1,4 +1,4 @@
-# hostinger_email_api.FoldersApi
+# hostinger_mail_api.FoldersApi
 
 All URIs are relative to *https://api.mail.hostinger.com*
 
@@ -22,24 +22,24 @@ Create a new folder in the managed mailbox.
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.models.v1_folders_create_request import V1FoldersCreateRequest
-from hostinger_email_api.models.v1_folders_resource import V1FoldersResource
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.models.v1_folders_create_request import V1FoldersCreateRequest
+from hostinger_mail_api.models.v1_folders_resource import V1FoldersResource
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.FoldersApi(api_client)
+    api_instance = hostinger_mail_api.FoldersApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox the bearer token is authorized for.
-    v1_folders_create_request = hostinger_email_api.V1FoldersCreateRequest() # V1FoldersCreateRequest | 
+    v1_folders_create_request = hostinger_mail_api.V1FoldersCreateRequest() # V1FoldersCreateRequest | 
 
     try:
         # Create folder
@@ -99,20 +99,20 @@ Delete a folder and all of its subfolders.
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.FoldersApi(api_client)
+    api_instance = hostinger_mail_api.FoldersApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox the bearer token is authorized for.
     folder = 'INBOX.OldName' # str | Folder path to delete (URL-encoded).
 
@@ -173,21 +173,21 @@ Retrieve a paginated list of folders in the managed mailbox.
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.models.v1_folders_collection import V1FoldersCollection
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.models.v1_folders_collection import V1FoldersCollection
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.FoldersApi(api_client)
+    api_instance = hostinger_mail_api.FoldersApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox the bearer token is authorized for.
     page = 1 # int | Page number (1-based). (optional) (default to 1)
     per_page = 25 # int | Items per page (max 100). (optional) (default to 25)
@@ -250,25 +250,25 @@ Rename an existing folder.
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.models.v1_folders_resource import V1FoldersResource
-from hostinger_email_api.models.v1_folders_update_request import V1FoldersUpdateRequest
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.models.v1_folders_resource import V1FoldersResource
+from hostinger_mail_api.models.v1_folders_update_request import V1FoldersUpdateRequest
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.FoldersApi(api_client)
+    api_instance = hostinger_mail_api.FoldersApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox the bearer token is authorized for.
     folder = 'INBOX.OldName' # str | Current folder path (URL-encoded).
-    v1_folders_update_request = hostinger_email_api.V1FoldersUpdateRequest() # V1FoldersUpdateRequest | 
+    v1_folders_update_request = hostinger_mail_api.V1FoldersUpdateRequest() # V1FoldersUpdateRequest | 
 
     try:
         # Update folder

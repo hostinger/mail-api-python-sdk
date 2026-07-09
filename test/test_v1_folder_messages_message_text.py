@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_folder_messages_message_text import V1FolderMessagesMessageText
+from hostinger_mail_api.models.v1_folder_messages_message_text import V1FolderMessagesMessageText
 
 class TestV1FolderMessagesMessageText(unittest.TestCase):
     """V1FolderMessagesMessageText unit test stubs"""

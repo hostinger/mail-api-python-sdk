@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.api.webhooks_api import WebhooksApi
+from hostinger_mail_api.api.webhooks_api import WebhooksApi
 
 
 class TestWebhooksApi(unittest.TestCase):

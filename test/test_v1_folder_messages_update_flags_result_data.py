@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_folder_messages_update_flags_result_data import V1FolderMessagesUpdateFlagsResultData
+from hostinger_mail_api.models.v1_folder_messages_update_flags_result_data import V1FolderMessagesUpdateFlagsResultData
 
 class TestV1FolderMessagesUpdateFlagsResultData(unittest.TestCase):
     """V1FolderMessagesUpdateFlagsResultData unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1FolderMessagesUpdateFlagsResultData(unittest.TestCase):
             return V1FolderMessagesUpdateFlagsResultData(
                 successful = [42,43],
                 failed = [
-                    hostinger_email_api.models.v1_folder_messages_update_flags_result_data_failed_inner.V1_FolderMessages_UpdateFlagsResult_data_failed_inner(
+                    hostinger_mail_api.models.v1_folder_messages_update_flags_result_data_failed_inner.V1_FolderMessages_UpdateFlagsResult_data_failed_inner(
                         uid = 44, 
                         reason = 'Failed to update message flags', )
                     ]
@@ -44,7 +44,7 @@ class TestV1FolderMessagesUpdateFlagsResultData(unittest.TestCase):
             return V1FolderMessagesUpdateFlagsResultData(
                 successful = [42,43],
                 failed = [
-                    hostinger_email_api.models.v1_folder_messages_update_flags_result_data_failed_inner.V1_FolderMessages_UpdateFlagsResult_data_failed_inner(
+                    hostinger_mail_api.models.v1_folder_messages_update_flags_result_data_failed_inner.V1_FolderMessages_UpdateFlagsResult_data_failed_inner(
                         uid = 44, 
                         reason = 'Failed to update message flags', )
                     ],

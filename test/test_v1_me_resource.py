@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_me_resource import V1MeResource
+from hostinger_mail_api.models.v1_me_resource import V1MeResource
 
 class TestV1MeResource(unittest.TestCase):
     """V1MeResource unit test stubs"""
@@ -33,20 +33,20 @@ class TestV1MeResource(unittest.TestCase):
         model = V1MeResource()
         if include_optional:
             return V1MeResource(
-                data = hostinger_email_api.models.v1_me_resource_data.V1_Me_Resource_data(
+                data = hostinger_mail_api.models.v1_me_resource_data.V1_Me_Resource_data(
                     order_resource_id = 'OR1a2b3c4d5e6f7g', 
                     mailboxes = [
-                        hostinger_email_api.models.v1/me/mailbox.V1.Me.Mailbox(
+                        hostinger_mail_api.models.v1/me/mailbox.V1.Me.Mailbox(
                             resource_id = 'AC1a2b3c4d5e6f7g', 
                             address = 'user@example.com', )
                         ], )
             )
         else:
             return V1MeResource(
-                data = hostinger_email_api.models.v1_me_resource_data.V1_Me_Resource_data(
+                data = hostinger_mail_api.models.v1_me_resource_data.V1_Me_Resource_data(
                     order_resource_id = 'OR1a2b3c4d5e6f7g', 
                     mailboxes = [
-                        hostinger_email_api.models.v1/me/mailbox.V1.Me.Mailbox(
+                        hostinger_mail_api.models.v1/me/mailbox.V1.Me.Mailbox(
                             resource_id = 'AC1a2b3c4d5e6f7g', 
                             address = 'user@example.com', )
                         ], ),

@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_folder_messages_move_bulk_request import V1FolderMessagesMoveBulkRequest
+from hostinger_mail_api.models.v1_folder_messages_move_bulk_request import V1FolderMessagesMoveBulkRequest
 
 class TestV1FolderMessagesMoveBulkRequest(unittest.TestCase):
     """V1FolderMessagesMoveBulkRequest unit test stubs"""

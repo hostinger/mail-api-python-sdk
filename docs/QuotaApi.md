@@ -1,4 +1,4 @@
-# hostinger_email_api.QuotaApi
+# hostinger_mail_api.QuotaApi
 
 All URIs are relative to *https://api.mail.hostinger.com*
 
@@ -19,21 +19,21 @@ Retrieve storage and message quota usage for the managed mailbox.
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.models.v1_quota_resource import V1QuotaResource
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.models.v1_quota_resource import V1QuotaResource
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.QuotaApi(api_client)
+    api_instance = hostinger_mail_api.QuotaApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox the bearer token is authorized for.
 
     try:

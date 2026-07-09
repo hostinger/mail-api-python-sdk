@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.api.account_api import AccountApi
+from hostinger_mail_api.api.account_api import AccountApi
 
 
 class TestAccountApi(unittest.TestCase):

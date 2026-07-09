@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_quota_quota import V1QuotaQuota
+from hostinger_mail_api.models.v1_quota_quota import V1QuotaQuota
 
 class TestV1QuotaQuota(unittest.TestCase):
     """V1QuotaQuota unit test stubs"""
@@ -34,7 +34,7 @@ class TestV1QuotaQuota(unittest.TestCase):
         if include_optional:
             return V1QuotaQuota(
                 quotas = [
-                    hostinger_email_api.models.v1/quota/quota_resource.V1.Quota.QuotaResource(
+                    hostinger_mail_api.models.v1/quota/quota_resource.V1.Quota.QuotaResource(
                         resource_name = 'STORAGE', 
                         usage = 1048576, 
                         limit = 1073741824, 
@@ -48,7 +48,7 @@ class TestV1QuotaQuota(unittest.TestCase):
         else:
             return V1QuotaQuota(
                 quotas = [
-                    hostinger_email_api.models.v1/quota/quota_resource.V1.Quota.QuotaResource(
+                    hostinger_mail_api.models.v1/quota/quota_resource.V1.Quota.QuotaResource(
                         resource_name = 'STORAGE', 
                         usage = 1048576, 
                         limit = 1073741824, 

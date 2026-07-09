@@ -1,4 +1,4 @@
-# hostinger_email_api.MessagesApi
+# hostinger_mail_api.MessagesApi
 
 All URIs are relative to *https://api.mail.hostinger.com*
 
@@ -31,20 +31,20 @@ Permanently delete every message in a folder (empty the folder).
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.MessagesApi(api_client)
+    api_instance = hostinger_mail_api.MessagesApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox the bearer token is authorized for.
     folder = 'INBOX.Trash' # str | Folder path (URL-encoded).
 
@@ -104,20 +104,20 @@ Permanently delete a single message.
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.MessagesApi(api_client)
+    api_instance = hostinger_mail_api.MessagesApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox the bearer token is authorized for.
     folder = 'INBOX' # str | Folder path (URL-encoded).
     uid = 42 # int | Message UID.
@@ -178,24 +178,24 @@ Permanently delete multiple messages from a folder.
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.models.v1_folder_messages_delete_bulk_request import V1FolderMessagesDeleteBulkRequest
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.models.v1_folder_messages_delete_bulk_request import V1FolderMessagesDeleteBulkRequest
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.MessagesApi(api_client)
+    api_instance = hostinger_mail_api.MessagesApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox the bearer token is authorized for.
     folder = 'INBOX' # str | Folder path (URL-encoded).
-    v1_folder_messages_delete_bulk_request = hostinger_email_api.V1FolderMessagesDeleteBulkRequest() # V1FolderMessagesDeleteBulkRequest | 
+    v1_folder_messages_delete_bulk_request = hostinger_mail_api.V1FolderMessagesDeleteBulkRequest() # V1FolderMessagesDeleteBulkRequest | 
 
     try:
         # Delete messages
@@ -253,21 +253,21 @@ Retrieve a single message by UID.
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.models.v1_folder_messages_resource import V1FolderMessagesResource
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.models.v1_folder_messages_resource import V1FolderMessagesResource
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.MessagesApi(api_client)
+    api_instance = hostinger_mail_api.MessagesApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox the bearer token is authorized for.
     folder = 'INBOX' # str | Folder path (URL-encoded).
     uid = 42 # int | Message UID.
@@ -331,20 +331,20 @@ Download a message attachment as `application/octet-stream`.
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.MessagesApi(api_client)
+    api_instance = hostinger_mail_api.MessagesApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox the bearer token is authorized for.
     folder = 'INBOX' # str | Folder path (URL-encoded).
     uid = 42 # int | Message UID.
@@ -410,20 +410,20 @@ Retrieve raw RFC822 source of a message as `message/rfc822` attachment.
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.MessagesApi(api_client)
+    api_instance = hostinger_mail_api.MessagesApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox the bearer token is authorized for.
     folder = 'INBOX' # str | Folder path (URL-encoded).
     uid = 42 # int | Message UID.
@@ -487,21 +487,21 @@ Retrieve rendered text (plain + HTML) of a message. Marks message as `\Seen`.
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.models.v1_folder_messages_message_text_resource import V1FolderMessagesMessageTextResource
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.models.v1_folder_messages_message_text_resource import V1FolderMessagesMessageTextResource
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.MessagesApi(api_client)
+    api_instance = hostinger_mail_api.MessagesApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox the bearer token is authorized for.
     folder = 'INBOX' # str | Folder path (URL-encoded).
     uid = 42 # int | Message UID.
@@ -565,21 +565,21 @@ List messages in a folder. Use POST /search for filtering. Sort fields: uid, dat
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.models.v1_folder_messages_collection import V1FolderMessagesCollection
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.models.v1_folder_messages_collection import V1FolderMessagesCollection
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.MessagesApi(api_client)
+    api_instance = hostinger_mail_api.MessagesApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox the bearer token is authorized for.
     folder = 'INBOX' # str | Folder path (URL-encoded).
     page = 1 # int | Page number (1-based). (optional) (default to 1)
@@ -646,25 +646,25 @@ Move a single message to a target folder.
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.models.v1_folder_messages_move_request import V1FolderMessagesMoveRequest
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.models.v1_folder_messages_move_request import V1FolderMessagesMoveRequest
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.MessagesApi(api_client)
+    api_instance = hostinger_mail_api.MessagesApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox the bearer token is authorized for.
     folder = 'INBOX' # str | Source folder path (URL-encoded).
     uid = 42 # int | Message UID.
-    v1_folder_messages_move_request = hostinger_email_api.V1FolderMessagesMoveRequest() # V1FolderMessagesMoveRequest | 
+    v1_folder_messages_move_request = hostinger_mail_api.V1FolderMessagesMoveRequest() # V1FolderMessagesMoveRequest | 
 
     try:
         # Move message
@@ -723,24 +723,24 @@ Move multiple messages from a source folder to a target folder.
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.models.v1_folder_messages_move_bulk_request import V1FolderMessagesMoveBulkRequest
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.models.v1_folder_messages_move_bulk_request import V1FolderMessagesMoveBulkRequest
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.MessagesApi(api_client)
+    api_instance = hostinger_mail_api.MessagesApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox the bearer token is authorized for.
     folder = 'INBOX' # str | Source folder path (URL-encoded).
-    v1_folder_messages_move_bulk_request = hostinger_email_api.V1FolderMessagesMoveBulkRequest() # V1FolderMessagesMoveBulkRequest | 
+    v1_folder_messages_move_bulk_request = hostinger_mail_api.V1FolderMessagesMoveBulkRequest() # V1FolderMessagesMoveBulkRequest | 
 
     try:
         # Move messages
@@ -798,26 +798,26 @@ Add and/or remove flags on a single message. Returns the updated message.
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.models.v1_folder_messages_flags_request import V1FolderMessagesFlagsRequest
-from hostinger_email_api.models.v1_folder_messages_resource import V1FolderMessagesResource
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.models.v1_folder_messages_flags_request import V1FolderMessagesFlagsRequest
+from hostinger_mail_api.models.v1_folder_messages_resource import V1FolderMessagesResource
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.MessagesApi(api_client)
+    api_instance = hostinger_mail_api.MessagesApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox the bearer token is authorized for.
     folder = 'INBOX' # str | Folder path (URL-encoded).
     uid = 42 # int | Message UID.
-    v1_folder_messages_flags_request = hostinger_email_api.V1FolderMessagesFlagsRequest() # V1FolderMessagesFlagsRequest | 
+    v1_folder_messages_flags_request = hostinger_mail_api.V1FolderMessagesFlagsRequest() # V1FolderMessagesFlagsRequest | 
 
     try:
         # Update message flags
@@ -879,28 +879,28 @@ Search messages in a folder. Filters in body; pagination and sort via query (`pa
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.models.v1_folder_messages_collection import V1FolderMessagesCollection
-from hostinger_email_api.models.v1_folder_messages_search_request import V1FolderMessagesSearchRequest
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.models.v1_folder_messages_collection import V1FolderMessagesCollection
+from hostinger_mail_api.models.v1_folder_messages_search_request import V1FolderMessagesSearchRequest
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.MessagesApi(api_client)
+    api_instance = hostinger_mail_api.MessagesApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox the bearer token is authorized for.
     folder = 'INBOX' # str | Folder path (URL-encoded).
     page = 1 # int |  (optional) (default to 1)
     per_page = 25 # int |  (optional) (default to 25)
     sort = '-uid' # str |  (optional) (default to '-uid')
-    v1_folder_messages_search_request = hostinger_email_api.V1FolderMessagesSearchRequest() # V1FolderMessagesSearchRequest |  (optional)
+    v1_folder_messages_search_request = hostinger_mail_api.V1FolderMessagesSearchRequest() # V1FolderMessagesSearchRequest |  (optional)
 
     try:
         # Search messages
@@ -963,25 +963,25 @@ Add and/or remove flags on multiple messages. Returns 200 when all UIDs succeed,
 * Bearer Authentication (BearerAuth):
 
 ```python
-import hostinger_email_api
-from hostinger_email_api.models.v1_folder_messages_flags_bulk_request import V1FolderMessagesFlagsBulkRequest
-from hostinger_email_api.models.v1_folder_messages_update_flags_result import V1FolderMessagesUpdateFlagsResult
-from hostinger_email_api.rest import ApiException
+import hostinger_mail_api
+from hostinger_mail_api.models.v1_folder_messages_flags_bulk_request import V1FolderMessagesFlagsBulkRequest
+from hostinger_mail_api.models.v1_folder_messages_update_flags_result import V1FolderMessagesUpdateFlagsResult
+from hostinger_mail_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: BearerAuth
-configuration = hostinger_email_api.Configuration(
+configuration = hostinger_mail_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_email_api.ApiClient(configuration) as api_client:
+with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_email_api.MessagesApi(api_client)
+    api_instance = hostinger_mail_api.MessagesApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox the bearer token is authorized for.
     folder = 'INBOX' # str | Folder path (URL-encoded).
-    v1_folder_messages_flags_bulk_request = hostinger_email_api.V1FolderMessagesFlagsBulkRequest() # V1FolderMessagesFlagsBulkRequest | 
+    v1_folder_messages_flags_bulk_request = hostinger_mail_api.V1FolderMessagesFlagsBulkRequest() # V1FolderMessagesFlagsBulkRequest | 
 
     try:
         # Update message flags

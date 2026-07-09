@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_folders_collection import V1FoldersCollection
+from hostinger_mail_api.models.v1_folders_collection import V1FoldersCollection
 
 class TestV1FoldersCollection(unittest.TestCase):
     """V1FoldersCollection unit test stubs"""
@@ -34,7 +34,7 @@ class TestV1FoldersCollection(unittest.TestCase):
         if include_optional:
             return V1FoldersCollection(
                 data = [
-                    hostinger_email_api.models.v1/folders/folder.V1.Folders.Folder(
+                    hostinger_mail_api.models.v1/folders/folder.V1.Folders.Folder(
                         path = 'INBOX.Sent', 
                         name = 'Sent', 
                         delimiter = '.', 
@@ -42,7 +42,7 @@ class TestV1FoldersCollection(unittest.TestCase):
                         message_count = 42, 
                         unread_count = 5, )
                     ],
-                pagination = hostinger_email_api.models.pagination.Pagination(
+                pagination = hostinger_mail_api.models.pagination.Pagination(
                     page = 1, 
                     per_page = 25, 
                     total = 137, 
@@ -51,7 +51,7 @@ class TestV1FoldersCollection(unittest.TestCase):
         else:
             return V1FoldersCollection(
                 data = [
-                    hostinger_email_api.models.v1/folders/folder.V1.Folders.Folder(
+                    hostinger_mail_api.models.v1/folders/folder.V1.Folders.Folder(
                         path = 'INBOX.Sent', 
                         name = 'Sent', 
                         delimiter = '.', 
@@ -59,7 +59,7 @@ class TestV1FoldersCollection(unittest.TestCase):
                         message_count = 42, 
                         unread_count = 5, )
                     ],
-                pagination = hostinger_email_api.models.pagination.Pagination(
+                pagination = hostinger_mail_api.models.pagination.Pagination(
                     page = 1, 
                     per_page = 25, 
                     total = 137, 

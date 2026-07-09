@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.api.messages_api import MessagesApi
+from hostinger_mail_api.api.messages_api import MessagesApi
 
 
 class TestMessagesApi(unittest.TestCase):

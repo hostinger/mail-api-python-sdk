@@ -1,18 +1,16 @@
 [tool.poetry]
-name = "hostinger_email_api"
-version = "1.0.1"
+name = "hostinger_mail_api"
+version = "1.0.2"
 description = "Hostinger Email API"
 authors = ["Hostinger <devs@hostinger.com>"]
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/hostinger/email-api-python-sdk"
+repository = "https://github.com/hostinger/mail-api-python-sdk"
 keywords = ["hostinger", "openapi", "python", "sdk", "rest", "api"]
-include = ["hostinger_email_api/py.typed"]
+include = ["hostinger_mail_api/py.typed"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-
-# urllib3 floor pinned to the first release without known security advisories (dependabot)
 urllib3 = ">= 2.7.0, < 3.0.0"
 python-dateutil = ">= 2.8.2"
 pydantic = ">= 2"
@@ -37,7 +35,7 @@ extension-pkg-whitelist = "pydantic"
 
 [tool.mypy]
 files = [
-  "hostinger_email_api",
+  "hostinger_mail_api",
   #"test",  # auto-generated tests
   "tests", # hand-written tests
 ]
@@ -75,7 +73,7 @@ disallow_any_generics = true
 
 [[tool.mypy.overrides]]
 module = [
-  "hostinger_email_api.configuration",
+  "hostinger_mail_api.configuration",
 ]
 warn_unused_ignores = true
 strict_equality = true

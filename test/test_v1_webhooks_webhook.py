@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_webhooks_webhook import V1WebhooksWebhook
+from hostinger_mail_api.models.v1_webhooks_webhook import V1WebhooksWebhook
 
 class TestV1WebhooksWebhook(unittest.TestCase):
     """V1WebhooksWebhook unit test stubs"""

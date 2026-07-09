@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_me_mailbox import V1MeMailbox
+from hostinger_mail_api.models.v1_me_mailbox import V1MeMailbox
 
 class TestV1MeMailbox(unittest.TestCase):
     """V1MeMailbox unit test stubs"""

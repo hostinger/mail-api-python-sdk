@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from hostinger_email_api.models.v1_folder_messages_delete_bulk_request import V1FolderMessagesDeleteBulkRequest
+from hostinger_mail_api.models.v1_folder_messages_delete_bulk_request import V1FolderMessagesDeleteBulkRequest
 
 # TODO update the JSON string below
 json = "{}"

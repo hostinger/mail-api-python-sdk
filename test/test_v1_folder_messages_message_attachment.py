@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_folder_messages_message_attachment import V1FolderMessagesMessageAttachment
+from hostinger_mail_api.models.v1_folder_messages_message_attachment import V1FolderMessagesMessageAttachment
 
 class TestV1FolderMessagesMessageAttachment(unittest.TestCase):
     """V1FolderMessagesMessageAttachment unit test stubs"""

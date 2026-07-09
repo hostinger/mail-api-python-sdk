@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_webhooks_webhook_with_secret import V1WebhooksWebhookWithSecret
+from hostinger_mail_api.models.v1_webhooks_webhook_with_secret import V1WebhooksWebhookWithSecret
 
 class TestV1WebhooksWebhookWithSecret(unittest.TestCase):
     """V1WebhooksWebhookWithSecret unit test stubs"""

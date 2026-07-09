@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_webhooks_resource_with_secret import V1WebhooksResourceWithSecret
+from hostinger_mail_api.models.v1_webhooks_resource_with_secret import V1WebhooksResourceWithSecret
 
 class TestV1WebhooksResourceWithSecret(unittest.TestCase):
     """V1WebhooksResourceWithSecret unit test stubs"""
@@ -33,11 +33,11 @@ class TestV1WebhooksResourceWithSecret(unittest.TestCase):
         model = V1WebhooksResourceWithSecret()
         if include_optional:
             return V1WebhooksResourceWithSecret(
-                data = hostinger_email_api.models.v1/webhooks/webhook_with_secret.V1.Webhooks.WebhookWithSecret()
+                data = hostinger_mail_api.models.v1/webhooks/webhook_with_secret.V1.Webhooks.WebhookWithSecret()
             )
         else:
             return V1WebhooksResourceWithSecret(
-                data = hostinger_email_api.models.v1/webhooks/webhook_with_secret.V1.Webhooks.WebhookWithSecret(),
+                data = hostinger_mail_api.models.v1/webhooks/webhook_with_secret.V1.Webhooks.WebhookWithSecret(),
         )
         """
 

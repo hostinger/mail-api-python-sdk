@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger_email_api.models.v1_webhooks_collection import V1WebhooksCollection
+from hostinger_mail_api.models.v1_webhooks_collection import V1WebhooksCollection
 
 class TestV1WebhooksCollection(unittest.TestCase):
     """V1WebhooksCollection unit test stubs"""
@@ -34,7 +34,7 @@ class TestV1WebhooksCollection(unittest.TestCase):
         if include_optional:
             return V1WebhooksCollection(
                 data = [
-                    hostinger_email_api.models.v1/webhooks/webhook.V1.Webhooks.Webhook(
+                    hostinger_mail_api.models.v1/webhooks/webhook.V1.Webhooks.Webhook(
                         id = '019683f8-1234-7abc-8def-0123456789ab', 
                         account_resource_id = 'AC1a2b3c4d5e6f7g', 
                         mailbox = 'user@example.com', 
@@ -48,7 +48,7 @@ class TestV1WebhooksCollection(unittest.TestCase):
                         created_at = '2026-04-07T12:00Z', 
                         updated_at = '2026-04-07T12:00Z', )
                     ],
-                pagination = hostinger_email_api.models.pagination.Pagination(
+                pagination = hostinger_mail_api.models.pagination.Pagination(
                     page = 1, 
                     per_page = 25, 
                     total = 137, 
@@ -57,7 +57,7 @@ class TestV1WebhooksCollection(unittest.TestCase):
         else:
             return V1WebhooksCollection(
                 data = [
-                    hostinger_email_api.models.v1/webhooks/webhook.V1.Webhooks.Webhook(
+                    hostinger_mail_api.models.v1/webhooks/webhook.V1.Webhooks.Webhook(
                         id = '019683f8-1234-7abc-8def-0123456789ab', 
                         account_resource_id = 'AC1a2b3c4d5e6f7g', 
                         mailbox = 'user@example.com', 
@@ -71,7 +71,7 @@ class TestV1WebhooksCollection(unittest.TestCase):
                         created_at = '2026-04-07T12:00Z', 
                         updated_at = '2026-04-07T12:00Z', )
                     ],
-                pagination = hostinger_email_api.models.pagination.Pagination(
+                pagination = hostinger_mail_api.models.pagination.Pagination(
                     page = 1, 
                     per_page = 25, 
                     total = 137, 
