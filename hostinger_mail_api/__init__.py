@@ -12,7 +12,7 @@
 """  # noqa: E501
 
 
-__version__ = "1.0.2"
+__version__ = "1.0.3"
 
 # import apis into sdk package
 from hostinger_mail_api.api.account_api import AccountApi
