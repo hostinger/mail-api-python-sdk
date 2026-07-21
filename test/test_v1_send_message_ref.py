@@ -12,10 +12,10 @@
 
 import unittest
 
-from hostinger_mail_api.models.v1_folder_messages_message_text import V1FolderMessagesMessageText
+from hostinger_mail_api.models.v1_send_message_ref import V1SendMessageRef
 
-class TestV1FolderMessagesMessageText(unittest.TestCase):
-    """V1FolderMessagesMessageText unit test stubs"""
+class TestV1SendMessageRef(unittest.TestCase):
+    """V1SendMessageRef unit test stubs"""
 
     def setUp(self):
         pass
@@ -23,28 +23,28 @@ class TestV1FolderMessagesMessageText(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> V1FolderMessagesMessageText:
-        """Test V1FolderMessagesMessageText
+    def make_instance(self, include_optional) -> V1SendMessageRef:
+        """Test V1SendMessageRef
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `V1FolderMessagesMessageText`
+        # uncomment below to create an instance of `V1SendMessageRef`
         """
-        model = V1FolderMessagesMessageText()
+        model = V1SendMessageRef()
         if include_optional:
-            return V1FolderMessagesMessageText(
-                text = 'Hello world',
-                html = '<p>Hello world</p>'
+            return V1SendMessageRef(
+                uid = 123,
+                folder = 'INBOX'
             )
         else:
-            return V1FolderMessagesMessageText(
-                text = 'Hello world',
-                html = '<p>Hello world</p>',
+            return V1SendMessageRef(
+                uid = 123,
+                folder = 'INBOX',
         )
         """
 
-    def testV1FolderMessagesMessageText(self):
-        """Test V1FolderMessagesMessageText"""
+    def testV1SendMessageRef(self):
+        """Test V1SendMessageRef"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

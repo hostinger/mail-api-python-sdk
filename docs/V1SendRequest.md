@@ -14,6 +14,8 @@ Name | Type | Description | Notes
 **text** | **str** |  | [optional] 
 **html** | **str** |  | [optional] 
 **attachments** | [**List[V1SendAttachment]**](V1SendAttachment.md) |  | [optional] 
+**in_reply_to** | [**V1SendMessageRef**](V1SendMessageRef.md) | Source message this is a reply to. Copies its Message-Id/References into In-Reply-To/References and flags it \\Answered. Mutually exclusive with forwardOf. | [optional] 
+**forward_of** | [**V1SendMessageRef**](V1SendMessageRef.md) | Source message this forwards. Copies its Message-Id/References into In-Reply-To/References and flags it $forwarded. Mutually exclusive with inReplyTo. | [optional] 
 
 ## Example
 

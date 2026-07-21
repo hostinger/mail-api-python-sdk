@@ -15,28 +15,18 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional
-from hostinger_mail_api.models.v1_send_attachment import V1SendAttachment
-from hostinger_mail_api.models.v1_send_message_ref import V1SendMessageRef
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
+from typing import Any, ClassVar, Dict, List
 from typing import Optional, Set
 from typing_extensions import Self
 
-class V1SendRequest(BaseModel):
+class V1SendMessageRef(BaseModel):
     """
-    Outgoing message payload. At least one of to, cc, or bcc must be present.
+    Reference to a source message by UID within a folder, used for reply/forward threading. Both fields are required.
     """ # noqa: E501
-    to: Optional[List[StrictStr]] = None
-    display_name: Optional[StrictStr] = Field(default=None, alias="displayName")
-    cc: Optional[List[StrictStr]] = None
-    bcc: Optional[List[StrictStr]] = None
-    subject: Optional[StrictStr] = None
-    text: Optional[StrictStr] = None
-    html: Optional[StrictStr] = None
-    attachments: Optional[List[V1SendAttachment]] = None
-    in_reply_to: Optional[V1SendMessageRef] = Field(default=None, description="Source message this is a reply to. Copies its Message-Id/References into In-Reply-To/References and flags it \\Answered. Mutually exclusive with forwardOf.", alias="inReplyTo")
-    forward_of: Optional[V1SendMessageRef] = Field(default=None, description="Source message this forwards. Copies its Message-Id/References into In-Reply-To/References and flags it $forwarded. Mutually exclusive with inReplyTo.", alias="forwardOf")
-    __properties: ClassVar[List[str]] = []
+    uid: StrictInt = Field(description="UID of the source message.")
+    folder: StrictStr = Field(description="Folder containing the source message.")
+    __properties: ClassVar[List[str]] = ["uid", "folder"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -56,7 +46,7 @@ class V1SendRequest(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of V1SendRequest from a JSON string"""
+        """Create an instance of V1SendMessageRef from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -81,7 +71,7 @@ class V1SendRequest(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of V1SendRequest from a dict"""
+        """Create an instance of V1SendMessageRef from a dict"""
         if obj is None:
             return None
 
@@ -89,6 +79,8 @@ class V1SendRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "uid": obj.get("uid"),
+            "folder": obj.get("folder")
         })
         return _obj
 
