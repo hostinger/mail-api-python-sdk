@@ -264,9 +264,9 @@ with hostinger_mail_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = hostinger_mail_api.WebhooksApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox the bearer token is authorized for.
-    status = 'status_example' # str |  (optional)
-    page = 1 # int |  (optional) (default to 1)
-    per_page = 15 # int |  (optional) (default to 15)
+    status = 'status_example' # str | Return only webhooks with this status. (optional)
+    page = 1 # int | Page number (1-based). (optional) (default to 1)
+    per_page = 15 # int | Items per page (max 1000). (optional) (default to 15)
 
     try:
         # List webhooks
@@ -285,9 +285,9 @@ with hostinger_mail_api.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mailbox_resource_id** | **str**| Resource ID of the managed mailbox the bearer token is authorized for. | 
- **status** | **str**|  | [optional] 
- **page** | **int**|  | [optional] [default to 1]
- **per_page** | **int**|  | [optional] [default to 15]
+ **status** | **str**| Return only webhooks with this status. | [optional] 
+ **page** | **int**| Page number (1-based). | [optional] [default to 1]
+ **per_page** | **int**| Items per page (max 1000). | [optional] [default to 15]
 
 ### Return type
 

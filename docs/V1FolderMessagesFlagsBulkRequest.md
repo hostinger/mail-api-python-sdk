@@ -7,8 +7,8 @@ Add and/or remove flags on multiple messages. At least one of addFlags or remove
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uids** | **List[int]** | Message UIDs to update. 1-100 entries, each &gt; 0. | 
-**add_flags** | **List[str]** |  | [optional] 
-**remove_flags** | **List[str]** |  | [optional] 
+**add_flags** | **List[str]** | IMAP flags to set on every listed message, e.g. \\Seen, \\Flagged, \\Answered, $forwarded. | [optional] 
+**remove_flags** | **List[str]** | IMAP flags to clear from every listed message. | [optional] 
 
 ## Example
 

@@ -6,11 +6,11 @@ Body for creating a webhook.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** |  | 
-**description** | **str** |  | [optional] 
-**events** | **List[str]** |  | 
-**status** | **str** |  | [optional] [default to 'active']
-**url** | **str** |  | 
+**name** | **str** | Human-readable webhook name. | 
+**description** | **str** | Optional free-text note about the webhook purpose. | [optional] 
+**events** | **List[str]** | Event types that trigger a delivery. | 
+**status** | **str** | Initial delivery state. Only active webhooks receive events. | [optional] [default to 'active']
+**url** | **str** | HTTPS endpoint that receives POST deliveries, authenticated with the webhook secret as &#x60;Authorization: Bearer &lt;secret&gt;&#x60;. Must be a public domain name (no IPs or internal hosts). | 
 
 ## Example
 

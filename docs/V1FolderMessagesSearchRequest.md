@@ -1,24 +1,24 @@
 # V1FolderMessagesSearchRequest
 
-Search criteria. All fields optional; combine to narrow results.
+Search criteria. All fields optional. subject, from, to, cc and body are alternatives (a message matching any one of them qualifies); all other fields are combined with AND.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**since** | **date** |  | [optional] 
-**before** | **date** |  | [optional] 
-**flags** | **List[str]** |  | [optional] 
-**uid** | **str** |  | [optional] 
-**subject** | **str** |  | [optional] 
-**var_from** | **str** |  | [optional] 
-**to** | **str** |  | [optional] 
-**cc** | **str** |  | [optional] 
-**body** | **str** |  | [optional] 
-**header** | **str** |  | [optional] 
-**larger** | **int** |  | [optional] 
-**smaller** | **int** |  | [optional] 
-**text** | **str** |  | [optional] 
+**since** | **date** | Only messages received on or after this date (YYYY-MM-DD). | [optional] 
+**before** | **date** | Only messages received before this date (YYYY-MM-DD). | [optional] 
+**flags** | **List[str]** | Only messages carrying all of these IMAP flags, e.g. \\Seen, \\Flagged, \\Answered, $forwarded. | [optional] 
+**uid** | **str** | IMAP UID set: single UID, range (1:100), open range (100:*), or comma-separated list. | [optional] 
+**subject** | **str** | Case-insensitive substring match on the Subject header. OR-combined with from/to/cc/body. | [optional] 
+**var_from** | **str** | Case-insensitive substring match on the From header. OR-combined with subject/to/cc/body. | [optional] 
+**to** | **str** | Case-insensitive substring match on the To header. OR-combined with subject/from/cc/body. | [optional] 
+**cc** | **str** | Case-insensitive substring match on the Cc header. OR-combined with subject/from/to/body. | [optional] 
+**body** | **str** | Case-insensitive substring match on the message body only (headers excluded). OR-combined with subject/from/to/cc. | [optional] 
+**header** | **str** | Match a specific header as Name:value, e.g. X-Custom-Header:value. Value match is a substring. | [optional] 
+**larger** | **int** | Only messages larger than this size in bytes. | [optional] 
+**smaller** | **int** | Only messages smaller than this size in bytes. | [optional] 
+**text** | **str** | Case-insensitive substring match across headers and body. | [optional] 
 
 ## Example
 

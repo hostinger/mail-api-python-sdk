@@ -77,6 +77,7 @@ void (empty response body)
 **422** | Request payload failed validation. &#x60;params&#x60; maps field name to an array of error messages. |  -  |
 **500** | Server-side failure. |  -  |
 **502** | Upstream service is unavailable or returned an unexpected response. |  -  |
+**504** | Upstream service did not respond within the configured timeout. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

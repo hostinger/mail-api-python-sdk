@@ -6,8 +6,8 @@ Add and/or remove flags on a message. At least one of addFlags or removeFlags mu
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**add_flags** | **List[str]** |  | [optional] 
-**remove_flags** | **List[str]** |  | [optional] 
+**add_flags** | **List[str]** | IMAP flags to set on the message, e.g. \\Seen, \\Flagged, \\Answered, $forwarded. | [optional] 
+**remove_flags** | **List[str]** | IMAP flags to clear from the message. | [optional] 
 
 ## Example
 

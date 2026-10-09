@@ -15,18 +15,19 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List
-from hostinger_mail_api.models.v1_webhooks_webhook_with_secret import V1WebhooksWebhookWithSecret
+from typing_extensions import Annotated
 from typing import Optional, Set
 from typing_extensions import Self
 
-class V1WebhooksResourceWithSecret(BaseModel):
+class V1FeedbackSubmitRequest(BaseModel):
     """
-    Single webhook payload including the one-time secret.
+    Feedback about the Mail API or the MCP server. The message is scrubbed of tokens, JWTs and key/secret/password values before validation and storage, so the length limit applies to the scrubbed text.
     """ # noqa: E501
-    data: V1WebhooksWebhookWithSecret
-    __properties: ClassVar[List[str]] = ["data"]
+    score: Annotated[int, Field(le=10, strict=True, ge=1)] = Field(description="How well the API served the task: 1 (poor) to 10 (excellent).")
+    message: Annotated[str, Field(strict=True, max_length=2000)] = Field(description="What happened and what was expected, including the operation and status code involved. Never include tokens, passwords or email contents.")
+    __properties: ClassVar[List[str]] = ["score", "message"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -46,7 +47,7 @@ class V1WebhooksResourceWithSecret(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of V1WebhooksResourceWithSecret from a JSON string"""
+        """Create an instance of V1FeedbackSubmitRequest from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -67,14 +68,11 @@ class V1WebhooksResourceWithSecret(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of data
-        if self.data:
-            _dict['data'] = self.data.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of V1WebhooksResourceWithSecret from a dict"""
+        """Create an instance of V1FeedbackSubmitRequest from a dict"""
         if obj is None:
             return None
 
@@ -82,7 +80,8 @@ class V1WebhooksResourceWithSecret(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "data": V1WebhooksWebhookWithSecret.from_dict(obj["data"]) if obj.get("data") is not None else None
+            "score": obj.get("score"),
+            "message": obj.get("message")
         })
         return _obj
 

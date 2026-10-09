@@ -12,22 +12,22 @@
 
 import unittest
 
-from hostinger_mail_api.api.account_api import AccountApi
+from hostinger_mail_api.api.feedback_api import FeedbackApi
 
 
-class TestAccountApi(unittest.TestCase):
-    """AccountApi unit test stubs"""
+class TestFeedbackApi(unittest.TestCase):
+    """FeedbackApi unit test stubs"""
 
     def setUp(self) -> None:
-        self.api = AccountApi()
+        self.api = FeedbackApi()
 
     def tearDown(self) -> None:
         pass
 
-    def test_get_current_account(self) -> None:
-        """Test case for get_current_account
+    def test_submit_feedback(self) -> None:
+        """Test case for submit_feedback
 
-        Get the authenticated account
+        Submit feedback
         """
         pass
 

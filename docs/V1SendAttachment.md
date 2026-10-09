@@ -6,9 +6,9 @@ Attachment payload for outgoing mail. Supports regular attachments and inline im
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**filename** | **str** |  | 
+**filename** | **str** | File name shown to the recipient, including extension. | 
 **content** | **str** | Attachment body. Base64-encoded by default; set encoding to switch. | 
-**content_type** | **str** |  | [optional] 
+**content_type** | **str** | MIME type of the attachment, e.g. application/pdf. Not inferred from filename; set it explicitly so clients render the attachment correctly. | [optional] 
 **cid** | **str** | Content-ID for inline images. Reference from HTML as &lt;img src&#x3D;\&quot;cid:logo\&quot;&gt;. | [optional] 
 **encoding** | **str** | Encoding of content. Defaults to base64. | [optional] 
 

@@ -897,9 +897,9 @@ with hostinger_mail_api.ApiClient(configuration) as api_client:
     api_instance = hostinger_mail_api.MessagesApi(api_client)
     mailbox_resource_id = 'AC1a2b3c4d5e6f7g' # str | Resource ID of the managed mailbox the bearer token is authorized for.
     folder = 'INBOX' # str | Folder path (URL-encoded).
-    page = 1 # int |  (optional) (default to 1)
-    per_page = 25 # int |  (optional) (default to 25)
-    sort = '-uid' # str |  (optional) (default to '-uid')
+    page = 1 # int | Page number (1-based). (optional) (default to 1)
+    per_page = 25 # int | Items per page (max 100). (optional) (default to 25)
+    sort = '-uid' # str | Sort field with optional `-` prefix for descending. Allowed: uid, date, size. (optional) (default to '-uid')
     v1_folder_messages_search_request = hostinger_mail_api.V1FolderMessagesSearchRequest() # V1FolderMessagesSearchRequest |  (optional)
 
     try:
@@ -920,9 +920,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mailbox_resource_id** | **str**| Resource ID of the managed mailbox the bearer token is authorized for. | 
  **folder** | **str**| Folder path (URL-encoded). | 
- **page** | **int**|  | [optional] [default to 1]
- **per_page** | **int**|  | [optional] [default to 25]
- **sort** | **str**|  | [optional] [default to &#39;-uid&#39;]
+ **page** | **int**| Page number (1-based). | [optional] [default to 1]
+ **per_page** | **int**| Items per page (max 100). | [optional] [default to 25]
+ **sort** | **str**| Sort field with optional &#x60;-&#x60; prefix for descending. Allowed: uid, date, size. | [optional] [default to &#39;-uid&#39;]
  **v1_folder_messages_search_request** | [**V1FolderMessagesSearchRequest**](V1FolderMessagesSearchRequest.md)|  | [optional] 
 
 ### Return type

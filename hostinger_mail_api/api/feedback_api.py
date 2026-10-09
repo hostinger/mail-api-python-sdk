@@ -14,14 +14,16 @@ from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
-from hostinger_mail_api.models.v1_me_resource import V1MeResource
+from pydantic import Field, StrictStr
+from typing_extensions import Annotated
+from hostinger_mail_api.models.v1_feedback_submit_request import V1FeedbackSubmitRequest
 
 from hostinger_mail_api.api_client import ApiClient, RequestSerialized
 from hostinger_mail_api.api_response import ApiResponse
 from hostinger_mail_api.rest import RESTResponseType
 
 
-class AccountApi:
+class FeedbackApi:
 
     def __init__(self, api_client=None) -> None:
         if api_client is None:
@@ -30,8 +32,10 @@ class AccountApi:
 
 
     @validate_call
-    def get_current_account(
+    def submit_feedback(
         self,
+        mailbox_resource_id: Annotated[StrictStr, Field(description="Resource ID of the managed mailbox the feedback is about, as returned by `GET /api/v1/me`.")],
+        v1_feedback_submit_request: V1FeedbackSubmitRequest,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -44,11 +48,15 @@ class AccountApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1MeResource:
-        """Get the authenticated account
+    ) -> None:
+        """Submit feedback
 
-        Returns the authenticated account and the mailboxes it can manage.
+        Report a problem or suggestion about this API or the MCP server to the Hostinger mail team.  Report when a call returned 4xx/5xx or unexpected data, was too slow, when documentation was missing or unclear, or when a capability you needed does not exist. Mention the failing operation and the status code you received so the team can find the request. Never include tokens, passwords or email contents: the message is scrubbed of secrets and capped at 2000 characters. Send one report per distinct issue.  A `429` (`ERR_FEEDBACK_RATE_LIMIT`) means feedback for this customer was submitted less than ten seconds ago; wait and retry.
 
+        :param mailbox_resource_id: Resource ID of the managed mailbox the feedback is about, as returned by `GET /api/v1/me`. (required)
+        :type mailbox_resource_id: str
+        :param v1_feedback_submit_request: (required)
+        :type v1_feedback_submit_request: V1FeedbackSubmitRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -71,7 +79,9 @@ class AccountApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_current_account_serialize(
+        _param = self._submit_feedback_serialize(
+            mailbox_resource_id=mailbox_resource_id,
+            v1_feedback_submit_request=v1_feedback_submit_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -79,10 +89,14 @@ class AccountApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "V1MeResource",
+            '204': None,
             '401': "Error",
+            '403': "Error",
+            '422': "Error",
+            '429': "Error",
             '500': "Error",
             '502': "Error",
+            '504': "Error",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -96,8 +110,10 @@ class AccountApi:
 
 
     @validate_call
-    def get_current_account_with_http_info(
+    def submit_feedback_with_http_info(
         self,
+        mailbox_resource_id: Annotated[StrictStr, Field(description="Resource ID of the managed mailbox the feedback is about, as returned by `GET /api/v1/me`.")],
+        v1_feedback_submit_request: V1FeedbackSubmitRequest,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -110,11 +126,15 @@ class AccountApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1MeResource]:
-        """Get the authenticated account
+    ) -> ApiResponse[None]:
+        """Submit feedback
 
-        Returns the authenticated account and the mailboxes it can manage.
+        Report a problem or suggestion about this API or the MCP server to the Hostinger mail team.  Report when a call returned 4xx/5xx or unexpected data, was too slow, when documentation was missing or unclear, or when a capability you needed does not exist. Mention the failing operation and the status code you received so the team can find the request. Never include tokens, passwords or email contents: the message is scrubbed of secrets and capped at 2000 characters. Send one report per distinct issue.  A `429` (`ERR_FEEDBACK_RATE_LIMIT`) means feedback for this customer was submitted less than ten seconds ago; wait and retry.
 
+        :param mailbox_resource_id: Resource ID of the managed mailbox the feedback is about, as returned by `GET /api/v1/me`. (required)
+        :type mailbox_resource_id: str
+        :param v1_feedback_submit_request: (required)
+        :type v1_feedback_submit_request: V1FeedbackSubmitRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -137,7 +157,9 @@ class AccountApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_current_account_serialize(
+        _param = self._submit_feedback_serialize(
+            mailbox_resource_id=mailbox_resource_id,
+            v1_feedback_submit_request=v1_feedback_submit_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -145,10 +167,14 @@ class AccountApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "V1MeResource",
+            '204': None,
             '401': "Error",
+            '403': "Error",
+            '422': "Error",
+            '429': "Error",
             '500': "Error",
             '502': "Error",
+            '504': "Error",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -162,8 +188,10 @@ class AccountApi:
 
 
     @validate_call
-    def get_current_account_without_preload_content(
+    def submit_feedback_without_preload_content(
         self,
+        mailbox_resource_id: Annotated[StrictStr, Field(description="Resource ID of the managed mailbox the feedback is about, as returned by `GET /api/v1/me`.")],
+        v1_feedback_submit_request: V1FeedbackSubmitRequest,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -177,10 +205,14 @@ class AccountApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get the authenticated account
+        """Submit feedback
 
-        Returns the authenticated account and the mailboxes it can manage.
+        Report a problem or suggestion about this API or the MCP server to the Hostinger mail team.  Report when a call returned 4xx/5xx or unexpected data, was too slow, when documentation was missing or unclear, or when a capability you needed does not exist. Mention the failing operation and the status code you received so the team can find the request. Never include tokens, passwords or email contents: the message is scrubbed of secrets and capped at 2000 characters. Send one report per distinct issue.  A `429` (`ERR_FEEDBACK_RATE_LIMIT`) means feedback for this customer was submitted less than ten seconds ago; wait and retry.
 
+        :param mailbox_resource_id: Resource ID of the managed mailbox the feedback is about, as returned by `GET /api/v1/me`. (required)
+        :type mailbox_resource_id: str
+        :param v1_feedback_submit_request: (required)
+        :type v1_feedback_submit_request: V1FeedbackSubmitRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -203,7 +235,9 @@ class AccountApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._get_current_account_serialize(
+        _param = self._submit_feedback_serialize(
+            mailbox_resource_id=mailbox_resource_id,
+            v1_feedback_submit_request=v1_feedback_submit_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -211,10 +245,14 @@ class AccountApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "V1MeResource",
+            '204': None,
             '401': "Error",
+            '403': "Error",
+            '422': "Error",
+            '429': "Error",
             '500': "Error",
             '502': "Error",
+            '504': "Error",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -223,8 +261,10 @@ class AccountApi:
         return response_data.response
 
 
-    def _get_current_account_serialize(
+    def _submit_feedback_serialize(
         self,
+        mailbox_resource_id,
+        v1_feedback_submit_request,
         _request_auth,
         _content_type,
         _headers,
@@ -246,10 +286,14 @@ class AccountApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
+        if mailbox_resource_id is not None:
+            _path_params['mailboxResourceId'] = mailbox_resource_id
         # process the query parameters
         # process the header parameters
         # process the form parameters
         # process the body parameter
+        if v1_feedback_submit_request is not None:
+            _body_params = v1_feedback_submit_request
 
 
         # set the HTTP header `Accept`
@@ -260,6 +304,19 @@ class AccountApi:
                 ]
             )
 
+        # set the HTTP header `Content-Type`
+        if _content_type:
+            _header_params['Content-Type'] = _content_type
+        else:
+            _default_content_type = (
+                self.api_client.select_header_content_type(
+                    [
+                        'application/json'
+                    ]
+                )
+            )
+            if _default_content_type is not None:
+                _header_params['Content-Type'] = _default_content_type
 
         # authentication setting
         _auth_settings: List[str] = [
@@ -267,8 +324,8 @@ class AccountApi:
         ]
 
         return self.api_client.param_serialize(
-            method='GET',
-            resource_path='/api/v1/me',
+            method='POST',
+            resource_path='/api/v1/mailboxes/{mailboxResourceId}/feedback',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,

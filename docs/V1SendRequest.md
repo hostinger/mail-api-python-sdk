@@ -6,14 +6,14 @@ Outgoing message payload. At least one of to, cc, or bcc must be present.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**to** | **List[str]** |  | [optional] 
-**display_name** | **str** |  | [optional] 
-**cc** | **List[str]** |  | [optional] 
-**bcc** | **List[str]** |  | [optional] 
-**subject** | **str** |  | [optional] 
-**text** | **str** |  | [optional] 
-**html** | **str** |  | [optional] 
-**attachments** | [**List[V1SendAttachment]**](V1SendAttachment.md) |  | [optional] 
+**to** | **List[str]** | Primary recipient email addresses. | [optional] 
+**display_name** | **str** | Sender display name shown in the From header alongside the mailbox address. | [optional] 
+**cc** | **List[str]** | Carbon-copy recipient email addresses. | [optional] 
+**bcc** | **List[str]** | Blind-carbon-copy recipient email addresses. Not visible to other recipients. | [optional] 
+**subject** | **str** | Message subject line. | [optional] 
+**text** | **str** | Plain-text body. Optional; if both text and html are omitted the message is sent without a body. | [optional] 
+**html** | **str** | HTML body. Optional; if both text and html are omitted the message is sent without a body. Inline images are referenced via cid: URLs matching attachment cid values. | [optional] 
+**attachments** | [**List[V1SendAttachment]**](V1SendAttachment.md) | Files to attach. Inline images set cid; regular attachments omit it. | [optional] 
 **in_reply_to** | [**V1SendMessageRef**](V1SendMessageRef.md) | Source message this is a reply to. Copies its Message-Id/References into In-Reply-To/References and flags it \\Answered. Mutually exclusive with forwardOf. | [optional] 
 **forward_of** | [**V1SendMessageRef**](V1SendMessageRef.md) | Source message this forwards. Copies its Message-Id/References into In-Reply-To/References and flags it $forwarded. Mutually exclusive with inReplyTo. | [optional] 
 

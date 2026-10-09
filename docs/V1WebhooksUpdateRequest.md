@@ -6,11 +6,11 @@ Body for partially updating a webhook. All fields optional; only present fields 
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** |  | [optional] 
-**description** | **str** |  | [optional] 
-**events** | **List[str]** |  | [optional] 
-**status** | **str** |  | [optional] 
-**url** | **str** |  | [optional] 
+**name** | **str** | Human-readable webhook name. | [optional] 
+**description** | **str** | Free-text note about the webhook purpose. Send null to clear. | [optional] 
+**events** | **List[str]** | Event types that trigger a delivery. Replaces the current list. | [optional] 
+**status** | **str** | Delivery state. Only active webhooks receive events; paused keeps config but stops deliveries. | [optional] 
+**url** | **str** | HTTPS endpoint that receives POST deliveries, authenticated with the webhook secret as &#x60;Authorization: Bearer &lt;secret&gt;&#x60;. Must be a public domain name (no IPs or internal hosts). | [optional] 
 
 ## Example
 
