@@ -16,7 +16,7 @@ Method | HTTP request | Description
 [**move_messages**](MessagesApi.md#move_messages) | **POST** /api/v1/mailboxes/{mailboxResourceId}/folders/{folder}/messages/move | Move messages
 [**patch_message**](MessagesApi.md#patch_message) | **PATCH** /api/v1/mailboxes/{mailboxResourceId}/folders/{folder}/messages/{uid} | Update message flags
 [**search_messages**](MessagesApi.md#search_messages) | **POST** /api/v1/mailboxes/{mailboxResourceId}/folders/{folder}/messages/search | Search messages
-[**update_message_flags**](MessagesApi.md#update_message_flags) | **POST** /api/v1/mailboxes/{mailboxResourceId}/folders/{folder}/messages/flags | Update message flags
+[**update_message_flags**](MessagesApi.md#update_message_flags) | **POST** /api/v1/mailboxes/{mailboxResourceId}/folders/{folder}/messages/flags | Update flags on multiple messages
 
 
 # **delete_all_messages**
@@ -954,7 +954,7 @@ Name | Type | Description  | Notes
 # **update_message_flags**
 > V1FolderMessagesUpdateFlagsResult update_message_flags(mailbox_resource_id, folder, v1_folder_messages_flags_bulk_request)
 
-Update message flags
+Update flags on multiple messages
 
 Add and/or remove flags on multiple messages. Returns 200 when all UIDs succeed, 207 with per-UID outcome when some fail.
 
@@ -984,7 +984,7 @@ with hostinger_mail_api.ApiClient(configuration) as api_client:
     v1_folder_messages_flags_bulk_request = hostinger_mail_api.V1FolderMessagesFlagsBulkRequest() # V1FolderMessagesFlagsBulkRequest | 
 
     try:
-        # Update message flags
+        # Update flags on multiple messages
         api_response = api_instance.update_message_flags(mailbox_resource_id, folder, v1_folder_messages_flags_bulk_request)
         print("The response of MessagesApi->update_message_flags:\n")
         pprint(api_response)

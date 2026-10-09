@@ -12,9 +12,9 @@ Method | HTTP request | Description
 
 Submit feedback
 
-Report a problem or suggestion about this API or the MCP server to the Hostinger mail team.
+Send the user's feedback about the Hostinger Email API to the Hostinger mail team.
 
-Report when a call returned 4xx/5xx or unexpected data, was too slow, when documentation was missing or unclear, or when a capability you needed does not exist. Mention the failing operation and the status code you received so the team can find the request. Never include tokens, passwords or email contents: the message is scrubbed of secrets and capped at 2000 characters. Send one report per distinct issue.
+Only call this when the user explicitly asks to send feedback, report a problem, or request a feature. Send the user's own words; never include tokens, passwords or email contents. The message is capped at 2000 characters.
 
 A `429` (`ERR_FEEDBACK_RATE_LIMIT`) means feedback for this customer was submitted less than ten seconds ago; wait and retry.
 

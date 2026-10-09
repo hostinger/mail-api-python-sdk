@@ -99,7 +99,7 @@ Class | Method | HTTP request | Description
 *MessagesApi* | [**move_messages**](docs/MessagesApi.md#move_messages) | **POST** /api/v1/mailboxes/{mailboxResourceId}/folders/{folder}/messages/move | Move messages
 *MessagesApi* | [**patch_message**](docs/MessagesApi.md#patch_message) | **PATCH** /api/v1/mailboxes/{mailboxResourceId}/folders/{folder}/messages/{uid} | Update message flags
 *MessagesApi* | [**search_messages**](docs/MessagesApi.md#search_messages) | **POST** /api/v1/mailboxes/{mailboxResourceId}/folders/{folder}/messages/search | Search messages
-*MessagesApi* | [**update_message_flags**](docs/MessagesApi.md#update_message_flags) | **POST** /api/v1/mailboxes/{mailboxResourceId}/folders/{folder}/messages/flags | Update message flags
+*MessagesApi* | [**update_message_flags**](docs/MessagesApi.md#update_message_flags) | **POST** /api/v1/mailboxes/{mailboxResourceId}/folders/{folder}/messages/flags | Update flags on multiple messages
 *QuotaApi* | [**get_quota**](docs/QuotaApi.md#get_quota) | **GET** /api/v1/mailboxes/{mailboxResourceId}/quota | Get mailbox quota
 *SendApi* | [**send_email**](docs/SendApi.md#send_email) | **POST** /api/v1/mailboxes/{mailboxResourceId}/send | Send email
 *WebhooksApi* | [**create_webhook**](docs/WebhooksApi.md#create_webhook) | **POST** /api/v1/mailboxes/{mailboxResourceId}/webhooks | Create webhook
