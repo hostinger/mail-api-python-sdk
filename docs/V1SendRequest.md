@@ -14,8 +14,8 @@ Name | Type | Description | Notes
 **text** | **str** | Plain-text body. Optional; if both text and html are omitted the message is sent without a body. | [optional] 
 **html** | **str** | HTML body. Optional; if both text and html are omitted the message is sent without a body. Inline images are referenced via cid: URLs matching attachment cid values. | [optional] 
 **attachments** | [**List[V1SendAttachment]**](V1SendAttachment.md) | Files to attach. Inline images set cid; regular attachments omit it. | [optional] 
-**in_reply_to** | [**V1SendMessageRef**](V1SendMessageRef.md) | Source message this is a reply to. Copies its Message-Id/References into In-Reply-To/References and flags it \\Answered. Mutually exclusive with forwardOf. | [optional] 
-**forward_of** | [**V1SendMessageRef**](V1SendMessageRef.md) | Source message this forwards. Copies its Message-Id/References into In-Reply-To/References and flags it $forwarded. Mutually exclusive with inReplyTo. | [optional] 
+**in_reply_to** | [**V1SendMessageRef**](V1SendMessageRef.md) | Source message this is a reply to, as an object {uid, folder} — not the Message-ID header string. Copies its Message-Id/References into In-Reply-To/References and flags it \\Answered. Mutually exclusive with forwardOf. | [optional] 
+**forward_of** | [**V1SendMessageRef**](V1SendMessageRef.md) | Source message this forwards, as an object {uid, folder} — not the Message-ID header string. Copies its Message-Id/References into In-Reply-To/References and flags it $forwarded. Mutually exclusive with inReplyTo. | [optional] 
 
 ## Example
 

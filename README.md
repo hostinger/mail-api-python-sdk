@@ -8,7 +8,7 @@ This is a Python SDK for the [Hostinger API](https://developers.hostinger.com).
 
 ## Requirements.
 
-Python 3.9+
+Python 3.11+
 
 ## Installation & Usage
 ### pip install
