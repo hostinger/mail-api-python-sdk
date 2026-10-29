@@ -22,7 +22,7 @@ def read(filename):
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 NAME = "hostinger_mail_api"
-VERSION = "1.18.3"
+VERSION = "1.18.4"
 PYTHON_REQUIRES = ">= 3.11"
 REQUIRES = [
     "urllib3 >= 2.7.0, < 3.0.0",
